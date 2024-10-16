@@ -1,0 +1,82 @@
+﻿<Window x:Class="Trigger250.KeyBoardWedge"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trigger250"
+        mc:Ignorable="d"
+        Title="Keyboard Wedge" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <RadioButton x:Name="SAPRadioButton" Grid.Column="0" GroupName="Presets" VerticalAlignment="Center" HorizontalAlignment="Center" Content="SAP" Checked="Preset_Checked"/>
+            <RadioButton x:Name="KBW_URadioButton" Grid.Column="1" GroupName="Presets" VerticalAlignment="Center" HorizontalAlignment="Center" Content="KBW-U" Checked="Preset_Checked"/>
+            <RadioButton x:Name="KBW_FRadioButton" Grid.Column="2" GroupName="Presets" VerticalAlignment="Center" HorizontalAlignment="Center" Content="KBW-F" Checked="Preset_Checked"/>
+            <RadioButton x:Name="CustomRadioButton" Grid.Column="3" GroupName="Presets" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Custom" Checked="Preset_Checked"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="StringBox" Grid.Column="0" Padding="5" Margin="10" BorderThickness="5" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+            <Button Grid.Column="1" Content="Delete" Margin="30"/>
+        </Grid>
+        <Grid Grid.Row="2" Margin="30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="LengthButton" IsEnabled="False" Content="L" Grid.Column="0" Click="LengthButton_Click" ToolTip="Length"/>
+            <Button x:Name="WidthButton" IsEnabled="False" Content="W" Grid.Column="1" Click="WidthButton_Click" ToolTip="Width"/>
+            <Button x:Name="HeightButton" IsEnabled="False" Content="H" Grid.Column="2" Click="HeightButton_Click" ToolTip="Height"/>
+            <Button x:Name="WeightButton" IsEnabled="False" Content="WT" Grid.Column="3" Click="WeightButton_Click" ToolTip="Weight"/>
+            <Button x:Name="BarcodeButton" IsEnabled="False" Content="BAR" Grid.Column="4" Click="BarButton_Click" ToolTip="Barcode"/>
+            <Button x:Name="TabButton" IsEnabled="False" Content="TAB" Grid.Column="5" Click="TabButton_Click" ToolTip="Tab"/>
+            <Button x:Name="SpaceButton" IsEnabled="False" Content="SP" Grid.Column="6" Click="SPButton_Click" ToolTip="Space"/>
+            <Button x:Name="CarriageReturnButton" IsEnabled="False" Content="CR" Grid.Column="7" Click="CRButton_Click" ToolTip="Carriage Return"/>
+            <Button x:Name="LineFeedButton" IsEnabled="False" Content="LF" Grid.Column="8" Click="LFButton_Click" ToolTip="Line Feed"/>
+            <Button x:Name="SemiColonButton" IsEnabled="False" Content=";" Grid.Column="9" Click="SemiButton_Click" ToolTip="SemiColon"/>
+            <Button x:Name="CommaButton" IsEnabled="False" Content="," Grid.Column="10" Click="ComaButton_Click" ToolTip="Comma"/>
+            <Button x:Name="XButton" IsEnabled="False" Content="x" Grid.Column="11" Click="XButton_Click" ToolTip="x"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Keyboard Type:" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <RadioButton x:Name="AzertyButton" Content="AZERTY" IsEnabled="False" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="QwertyButton" Content="QWERTY" IsChecked="True" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Button x:Name="CancelButton" Content="Cancel" Grid.Column="2" Grid.RowSpan="2" Margin="20" Click="CancelButton_Click"/>
+            <Button x:Name="SaveButton" Content="Save" Grid.Column="3" Grid.RowSpan="2" Margin="20" Click="SaveButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>
