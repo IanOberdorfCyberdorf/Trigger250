@@ -1,0 +1,1 @@
+This application is being developed for Mettler Toledo TLD250 users. This tool will transfer the Keyboard wedge functionality from the TLD250 to your internal computer so you can trigger the dimensioning functionality from your keyboard.
